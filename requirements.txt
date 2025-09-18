@@ -1,0 +1,10 @@
+# Flask Backend
+flask
+flask-cors
+google-generativeai
+requests
+
+# Streamlit Frontend
+streamlit
+streamlit-webrtc
+av
