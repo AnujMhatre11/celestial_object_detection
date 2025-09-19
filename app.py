@@ -13,7 +13,7 @@ CORS(app)  # Enable Cross-Origin Resource Sharing
 
 # --- Gemini API Configuration ---
 # It's recommended to use environment variables for your API key
-GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', 'AIzaSyDUWkT096VYsbNLuCr5ZSVoO2kQJwfFYQM') # Replace with your key if not using env vars
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', 'AIzaSyAM9kPnDMD0ZtJf564s6VtbyGs4C2Iw8VY') # Replace with your key if not using env vars
 genai.configure(api_key=GOOGLE_API_KEY)
 # --- End of Gemini API Configuration ---
 
@@ -26,6 +26,7 @@ def scan_celestial_body():
     Handles the image analysis and returns a list of identified celestial bodies.
     """
     try:
+        print("HITEDDDDDDD 1")
         data = request.json
         if not data or 'imageData' not in data:
             return jsonify({"error": "No image data provided"}), 400
@@ -68,6 +69,7 @@ def get_planet_details():
     Fetches specific details for a given celestial body.
     """
     try:
+        print("HITEDDDDDDD 2")
         data = request.json
         planet_name = data.get('planet_name')
 
